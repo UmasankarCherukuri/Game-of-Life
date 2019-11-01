@@ -67,7 +67,10 @@ public class winTwo {
 			
 		
 		frame = new JFrame();
-		frame.setBounds(100, 100, col*cellSize+40, row*cellSize+150);
+		if(col<6)
+			frame.setBounds(100, 100, 350, row*cellSize+150);
+		else
+			frame.setBounds(100, 100, col*cellSize+40, row*cellSize+150);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -123,9 +126,11 @@ public class winTwo {
 		simulationPanel.setBounds(10, 10, col*cellSize+2, row*cellSize+2);
 		frame.getContentPane().add(simulationPanel);
 		
-		controlPanel = new JPanel();
-		
-		controlPanel.setBounds(10, row*cellSize+20, col*cellSize, 90);
+		controlPanel = new JPanel(); 
+		if(col<6)
+			controlPanel.setBounds(10, row*cellSize+20, 300, 90);
+		else
+			controlPanel.setBounds(10, row*cellSize+20, col*cellSize, 90);
 		frame.getContentPane().add(controlPanel);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[] {30, 0, 0, 30, 0};
@@ -146,7 +151,7 @@ public class winTwo {
 		gbc_btnRandom.gridy = 1;
 		controlPanel.add(btnRandom, gbc_btnRandom);
 		
-		JButton btnClear = new JButton("     Clear     ");
+		JButton btnClear = new JButton("    Clear    ");
 		btnClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				for(int l=0; l<row; l++)

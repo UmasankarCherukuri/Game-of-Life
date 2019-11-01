@@ -60,7 +60,7 @@ public class winOne {
 		frame.getContentPane().add(l3);
 		
 		t2 = new JTextField();
-		t2.setBounds(201, 152, 86, 20);
+		t2.setBounds(201, 152, 87, 20);
 		frame.getContentPane().add(t2);
 		t2.setColumns(10);
 		
