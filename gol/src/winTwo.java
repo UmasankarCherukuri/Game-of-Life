@@ -19,6 +19,23 @@ import java.awt.Insets;
 import javax.swing.border.EmptyBorder;
 
 public class winTwo {
+	
+
+	 static private Object obj = new Object();
+
+	    public static void staticWait() {
+	        synchronized (obj) {
+	            try {
+	                obj.wait();
+	            } catch (Exception e) {}
+	        }    
+	    }
+
+	    public static void staticNotify() {
+	        synchronized (obj) {
+	            obj.notify();
+	        }
+	    }
 
 	private JFrame frame;
 	public static int[][] grid;
@@ -60,7 +77,7 @@ public class winTwo {
 			               {
 			   
 			                       g.setColor(Color.DARK_GRAY);
-			                       g.fillRect(0,0,1350,750);
+			                       g.fillRect(0,0,1370,760);
 			   
 			                       for(int i=0;i<row;i++)
 			                       {
@@ -103,7 +120,7 @@ public class winTwo {
 			                 }
 			             });
 		
-		simulationPanel.setBounds(10, 10, col*cellSize, row*cellSize);
+		simulationPanel.setBounds(10, 10, col*cellSize+2, row*cellSize+2);
 		frame.getContentPane().add(simulationPanel);
 		
 		controlPanel = new JPanel();

@@ -1,11 +1,14 @@
 public class Main {
 	
+	
 	public static void main(String[] args)
 	{
+		int a=0;
 		winOne g1 = new winOne();
 		while(!g1.parametersInitialized)
-		System.out.println(g1.row);
-		System.out.println(g1.col);
+		{
+				winTwo.staticWait();
+		}
 		
 		final int row = g1.row;
 		final int col = g1.col;

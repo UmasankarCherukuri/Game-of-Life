@@ -71,6 +71,7 @@ public class winOne {
 				col = Integer.parseInt(t2.getText());
 				parametersInitialized = true;
 				frame.dispose();
+				winTwo.staticNotify();
 			}
 		});
 		btnOk.setBounds(145, 201, 101, 23);
