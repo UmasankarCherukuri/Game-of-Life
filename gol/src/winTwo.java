@@ -67,7 +67,7 @@ public class winTwo {
 			
 		
 		frame = new JFrame();
-		if(col<6)
+		if(col*cellSize<350)
 			frame.setBounds(100, 100, 350, row*cellSize+150);
 		else
 			frame.setBounds(100, 100, col*cellSize+40, row*cellSize+150);
@@ -127,7 +127,7 @@ public class winTwo {
 		frame.getContentPane().add(simulationPanel);
 		
 		controlPanel = new JPanel(); 
-		if(col<6)
+		if(col*cellSize<350)
 			controlPanel.setBounds(10, row*cellSize+20, 300, 90);
 		else
 			controlPanel.setBounds(10, row*cellSize+20, col*cellSize, 90);
